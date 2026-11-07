@@ -8,5 +8,11 @@
   ],
   "labels": ["dependencies"],
   "minimumReleaseAge": "7 days",
-  "postUpdateOptions": ["pnpmDedupe"]
+  "packageRules": [
+    {
+      "matchManagers": ["npm"],
+      "matchFileNames": ["pnpm-lock.yaml"],
+      "postUpdateOptions": ["pnpmDedupe"]
+    }
+  ]
 }
